@@ -45,5 +45,7 @@ set autoindent
 set expandtab
 set shiftwidth=4
 
+
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 

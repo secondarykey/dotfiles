@@ -1,20 +1,14 @@
+install.shを追加しました。
 
-なんとなくdein.vimに変更した
-
-```
-$ git clone https://github.com/secondarykey/dotfiles
-$ 
-$ mkdir -p $HOME/.cache/dein
-$ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-$ sh ./installer.sh $HOME/.cache/dein
-$
-$ cp -p dotfiles/.vimrc $HOME/.vimrc
-```
-
-でvimで
+WSLのvimが古かったのでdeinが動作しないことがあった。
+以下はvimのアップデート方法
 
 ```
-:call dein#install()
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt instal vim
+sudo apt install vim
 ```
 
-でOK。
+go2拡張子に対応し、WSL上で何故か挿入モードになる問題に対応
+

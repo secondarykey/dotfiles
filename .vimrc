@@ -1,7 +1,7 @@
+set t_u7=
+set t_RV=
 
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+set nocompatible
 
 " Required:
 set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
@@ -47,5 +47,8 @@ set shiftwidth=4
 
 
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
+ autocmd BufRead,BufNewFile,BufWritePre *.go2 set filetype=go
+
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+set completeopt=menu,preview

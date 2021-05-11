@@ -12,3 +12,6 @@ sudo apt install vim
 
 go2拡張子に対応し、WSL上で何故か挿入モードになる問題に対応
 
+installer.sh .cache/dein
+
+:call dein#install()

@@ -52,3 +52,10 @@ autocmd FileType go autocmd BufWritePre <buffer> Fmt
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 set completeopt=menu,preview
+
+command! Err :call append(line('.'),'if err != nil {return fmt.Errorf("error: %w")}')
+command! Xerr :call append(line('.'),'if err != nil {return xerrors.Errorf("error: %w")}')
+
+
+
+
